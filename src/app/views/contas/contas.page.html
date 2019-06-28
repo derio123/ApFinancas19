@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list *ngFor="let conta of contas"> 
+    <ion-item >
+      {{conta.descricao}} 
+    </ion-item>
+    <!-- <ion-item>
+      <ion-label>Toggle</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Radio</ion-label>
+      <ion-radio slot="end"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Checkbox</ion-label>
+      <ion-checkbox slot="start"></ion-checkbox>
+    </ion-item> -->
+  </ion-list>
+
+
+  <ion-fab vertical="bottom" color="dark" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addContasModal($event)">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab vertical="bottom" color="dark" horizontal="start" slot="fixed">
+    <ion-fab-button title="Adicionar novas tarefas" translucent="true" routerLink="/home" routerDirection="auto">
+      <ion-icon name="arrow-back"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

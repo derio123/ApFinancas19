@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button icon-only ion-button (click)="fechar()">
+        <!-- <span ion-text color="primary" showWhen="ios">Cancel</span> showWhen="android"-->
+        <ion-icon name="md-close-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Editar conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label stacked>Categoria</ion-label>
+    <!-- [(ngModel)]="classe.entradaSaida" -->
+    <ion-select okText="Ok" cancelText="Cancelar" >
+      <ion-select-option *ngFor="let conta of contas">{{conta.descricao}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button title="Adicionar novas tarefas" translucent="true" (click)="fechar()">
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button title="Grava" translucent="true">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
