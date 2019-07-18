@@ -1,0 +1,40 @@
+<ion-card class="item">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <div class="user-avatar">
+            <ion-avatar class="avatar1">
+              <img src="./../../assets/imgs/806123800_191203.jpg">
+            </ion-avatar>
+          </div>
+        </ion-col>
+        <ion-col col-8>
+          <h2 ion-text text-center class="no-margin bold text-white">
+            Rubiria Andressa
+          </h2>
+          <ion-text text-center></ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-list class="item">
+        <ion-item button routerLink="/add" routerDirection="auto" shape="round">
+          <!--(click)="logout()" -->
+          <ion-icon name="jet" color="primary"></ion-icon>
+          <ion-text color="primary">Lancar</ion-text>
+        </ion-item>
+        <ion-item button shape="round" routerLink="/contas" routerDirection="auto" color="orange">
+          <ion-icon name="paper" color="primary"></ion-icon>
+          <ion-text color="primary">Contas</ion-text>
+        </ion-item>
+        <ion-item button routerLink="/detalhescontato">
+          <ion-icon name="information-circle" item-start color="primary"></ion-icon>
+          Sobre o app
+        </ion-item>
+        <!-- <ion-button ion-item>
+                <ion-icon name="cafe" item-start></ion-icon>
+                Cafe  
+              </ion-button> -->
+      </ion-list>
+    </ion-grid>
+  </ion-toolbar>
+</ion-card>

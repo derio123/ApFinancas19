@@ -1,15 +1,61 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>addLancar</ion-title>
+    <ion-title class="ion-text-left">EditarLancamento</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input type="text"></ion-input>
+      <!--[(ngModel)]="classe.descricao"-->
+    </ion-item>
 
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input type="number"></ion-input><!-- [(ngModel)]="classe.valor" -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Data</ion-label>
+      <ion-datetime doneText="OK" cancelText="Cancelar" displayFormat="MM/DD/YY" placeholder="Selecione a data">
+      </ion-datetime>  <!-- [(ngModel)]="classe.data" -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Entrada/Saida</ion-label> <!-- [(ngModel)]="classe.entradaSaida" -->
+      <ion-select okText="OK" cancelText="Cancelar">
+        <ion-select-option value="entrada">Entrada</ion-select-option>
+        <ion-select-option value="saida">Saida</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Conta</ion-label>
+      <ion-select okText="OK" cancelText="Cancelar" type="text">
+        <!-- [(ngModel)]="classe.conta" -->
+        <ion-select-option>
+          <!-- *ngFor="let item of listaContas" -->
+          descricao
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Pago</ion-label>
+      <ion-checkbox></ion-checkbox><!-- [(ngModel)]="classe.pago" -->
+    </ion-item>
+  </ion-list>
+
+  <ion-fab vertical="center" horizontal="center" slot="fixed">
+    <ion-fab-button title="Salvar" translucent="true" routerDirection="auto">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab> <!-- (click)="salvar()" -->
 
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
-    <ion-fab-button title="Adicionar novas tarefas" translucent="true" routerLink="/home" routerDirection="auto">
-      <ion-icon name="arrow-back"></ion-icon>
+    <ion-fab-button title="Fechar" translucent="true" routerLink="/home" routerDirection="auto">
+      <ion-icon name="close-circle"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 </ion-content>

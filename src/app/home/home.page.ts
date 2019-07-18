@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { PopoverController } from '@ionic/angular';
+import { MenuComponent } from '../views/menu/menu.component';
 
 @Component({
   selector: 'app-home',
@@ -8,20 +9,8 @@ import { Router } from '@angular/router';
 })
 
 export class HomePage {
-
-  public lancamentos = [
-    {descricao: 'fatura claro'},
-    {descricao: 'escola'},
-    {descricao: 'teste'},
-    {descricao: 'faculdade'},
-    {descricao: 'reforma'},
-    {descricao: 'casa própria'},
-    {descricao: 'conzinha'},
-    {descricao: 'quarto'},
-    {descricao: 'carro'},
-  ];
   APF = 'dashboard';
-  constructor( private router: Router) {}
+  constructor(public popoverCtrl: PopoverController,) {}
   /* segmentChanged(ev: any) {
     console.log('Segment changed', ev);
   } */
@@ -34,7 +23,16 @@ export class HomePage {
     }
   }
 
-  addLancamentos() {
-    this.router.navigateByUrl('/add-lancar');
+  async menuPop(ev: any) {
+    const modal = await this.popoverCtrl.create({
+      component: MenuComponent
+    });
+    return await modal.present();
+  }
+
+  fechar() {
+    this.popoverCtrl.dismiss({
+      dismissed: true
+    });
   }
 }

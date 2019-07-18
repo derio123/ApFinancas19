@@ -1,5 +1,7 @@
 {
   "name": "ApFinancas19",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,12 +1,24 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Nova conta</ion-title>
+    <ion-title>Lançamentos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  
+  <ion-list>
+    <ion-card *ngFor="let lancamento of lancamentos">
+      <ion-item>
+        <ion-label>{{lancamento.descricao}} </ion-label>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addLancamentos()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button title="Adicionar novas tarefas" translucent="true" routerLink="/home" routerDirection="auto">
       <ion-icon name="arrow-back"></ion-icon>
