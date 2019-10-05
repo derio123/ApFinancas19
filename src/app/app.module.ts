@@ -10,10 +10,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddcontasComponent } from './views/addcontas/addcontas.component';
 import { MenuComponent } from './views/menu/menu.component';
+import { SaldoComponent } from './views/saldo/saldo.component';
 
 @NgModule({
-  declarations: [AppComponent, AddcontasComponent, MenuComponent],
-  entryComponents: [AddcontasComponent, MenuComponent],
+  declarations: [AppComponent, AddcontasComponent, MenuComponent, SaldoComponent],
+  entryComponents: [AddcontasComponent, MenuComponent, SaldoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,

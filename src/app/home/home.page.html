@@ -10,31 +10,24 @@
   <div [ngSwitch]="APF" color="warning">
     <ion-list *ngSwitchCase="'dashboard'">
       <ion-card>
-        <img src="../../assets/imgs/FINANÇAS-PESSOAIS.png" />
-        <ion-card-content>
-          <ion-card-title>
-            Aplicativo Financeiro
-          </ion-card-title>
-          <ion-text color="dark">
-            Este aplicativo foi criado no curso
-            Aplicativo Financeiro com Ionic3.
-          </ion-text>
-          <ion-row>
-            <ion-col size="12">
-              <ion-button expand="full" shape="round">
-                <ion-icon slot="start" name="logo-usd"></ion-icon>Saldo
-              </ion-button>
-            </ion-col>
-          </ion-row>
+        <ion-card-header>
           <ion-card-title class="ion-text-center">
-            Saldo
+            Resumo do mês
           </ion-card-title>
-          <ion-toolbar color="dark">
-            <ion-title>
-              R$ 2.000,00
-            </ion-title>
-          </ion-toolbar>
+        </ion-card-header>
+
+        <ion-card-content>
+          Keep close to Nature's heart... and break clear away, once in awhile,
+          and climb a mountain or spend a week in the woods. Wash your spirit clean.
         </ion-card-content>
+        <ion-card-title class="ion-text-center">
+          Saldo
+        </ion-card-title>
+        <ion-toolbar color="dark">
+          <ion-title class="ion-text-center">
+            R$ 2.000,00
+          </ion-title>
+        </ion-toolbar>
       </ion-card>
     </ion-list>
   </div>
@@ -45,16 +38,36 @@
     </ion-list>
   </div>
 
-  <div [ngSwitch]="APF">
+  <!-- <div [ngSwitch]="APF">
     <ion-list *ngSwitchCase="'relatórios'">
       teste
     </ion-list>
-  </div>
+  </div> -->
 
   <div [ngSwitch]="APF">
     <ion-list *ngSwitchCase="'sobre'">
       <ion-text color="primary">
         <h1>Sobre o app</h1>
+        <ion-card>
+          <img src="../../assets/imgs/FINANÇAS-PESSOAIS.png" />
+          <ion-card-content>
+            <ion-card-title>
+              Aplicativo Financeiro
+            </ion-card-title>
+            <ion-text color="dark">
+              Este aplicativo foi criado no curso
+              Aplicativo Financeiro com Ionic3.
+            </ion-text>
+            <ion-row>
+              <ion-col size="12">
+                <ion-button expand="full" shape="round">
+                  <ion-icon color="dark" name="information-circle"></ion-icon>
+                  Informação
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
       </ion-text>
     </ion-list>
   </div>
@@ -73,9 +86,9 @@
       <ion-segment-button value="dashboard" checked>
         <ion-icon name="cash"></ion-icon>
       </ion-segment-button>
-      <ion-segment-button value="relatórios">
+      <!-- <ion-segment-button value="relatórios">
         <ion-icon name="analytics"></ion-icon>
-      </ion-segment-button>
+      </ion-segment-button> -->
       <ion-segment-button value="sobre">
         <ion-icon name="information-circle"></ion-icon>
       </ion-segment-button>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PopoverController } from '@ionic/angular';
 import { MenuComponent } from '../views/menu/menu.component';
+import { SaldoComponent } from '../views/saldo/saldo.component';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,7 @@ import { MenuComponent } from '../views/menu/menu.component';
 
 export class HomePage {
   APF = 'dashboard';
-  constructor(public popoverCtrl: PopoverController,) {}
+  constructor(public popoverCtrl: PopoverController, ) { }
   /* segmentChanged(ev: any) {
     console.log('Segment changed', ev);
   } */
@@ -28,11 +29,5 @@ export class HomePage {
       component: MenuComponent
     });
     return await modal.present();
-  }
-
-  fechar() {
-    this.popoverCtrl.dismiss({
-      dismissed: true
-    });
   }
 }
